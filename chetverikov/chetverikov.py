@@ -12,7 +12,7 @@ class Chetverikov:
     """
     This class implements the Chetverikov method for time series analysis.
 
-    The Chetverikov class provides several methods for fitting and analyzing time series data:
+    This class provides several methods for fitting and analyzing time series data:
 
     - `fit`: fits the Chetverikov model to the provided time series data
     - `summary`: returns a summary of the fitted Chetverikov model, including the trend, seasonality, and residual components
@@ -30,6 +30,17 @@ class Chetverikov:
     - `s2`: the second assessment of seasonality
     - `resid`: the residual component
     - `k`: the intensity coefficient of the seasonal wave
+
+    Algorithm:
+
+    1. The initial series `y` is aligned according to the chronological average formula with a period of `L` to get preliminary assessment of the trend `f0`.
+    2. Calculate the deviations of the original row from the aligned one.
+    3. For each period, the standard deviation is calculated and normalized.
+    4. The first seasonal wave assesment `s1` is calculated based on the normalized deviations.
+    6. The first seasonal wave `s1` is multiplied by the standard deviation of each period and subtracted from the original series `y`, resulting in a first estimate of the trend `f1`.
+    7. The resulting trend `f1` is smoothed with a moving average and a new second trend estimate `f2` is obtained.
+    8. The second estimate of the seasonal wave `s2` is calculated in the same way as in 2-4 points.
+    9. The residual component `resid` is calculated by multiplying the second seasonal wave `s2` by the standard deviation of each period and subtracting from the normalized deviations from point 8.
     """
 
     def __init__(self) -> None:
