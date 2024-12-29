@@ -40,6 +40,7 @@ To get results, you can use:
 
 ```python
 import numpy as np
+from chetverikov import Chetverikov
 
 np.random.seed(0)
 
