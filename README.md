@@ -15,6 +15,12 @@ Provided code implements Chetverikov algorithm to calculate:
 
 ### Manual
 
+Install package through git:
+
+    pip install git+https://github.com/Dragon066/chetverikov.git
+
+**OR**
+
 Clone this repository:
 
     git clone https://github.com/Dragon066/chetverikov.git
@@ -25,7 +31,7 @@ Install requirements:
 
 ## Usage
 
-This lib provides class `Chetverikov`, that includes several methods for time-series analysis.
+This package provides class `Chetverikov`, that includes several methods for time-series analysis.
 
 To fit model, use `.fit(y, L, rolling)` method:
 - `y` - initial series;
