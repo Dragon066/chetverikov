@@ -9,10 +9,6 @@ Provided code implements Chetverikov algorithm to calculate:
 
 ## Installation
 
-### PyPI
-
-    pip install chetverikov
-
 ### Manual
 
 Install package through git:
